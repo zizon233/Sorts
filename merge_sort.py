@@ -21,3 +21,7 @@ def mergesort(start, end):
     li2 = mergesort((start+end)//2, end)
     li3 = merge(li1, li2)
     return li3
+
+li = list(map(int, input().split()))
+li = mergesort(0, len(li))
+print(li)
