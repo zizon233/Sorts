@@ -1,7 +1,7 @@
-#include <iostream>
+#include <vector>
 using namespace std;
 
-void quick_sort(int arr[], int sidx, int eidx){
+void Quick_sort(vector<int> &arr, int sidx, int eidx){
     if(sidx>=eidx) {
         return;
     }
@@ -19,20 +19,6 @@ void quick_sort(int arr[], int sidx, int eidx){
     int temp = arr[eidx];
     arr[eidx] = arr[pivot];
     arr[pivot] = temp;
-    quick_sort(arr, pivot, eidx-1);
-    quick_sort(arr, eidx+1, last);
-}
-
-int main(){
-    int n, * arr;
-    arr = new int[10000];
-    cin >> n;
-    for(int i=0;i<n;i++){
-        cin >> arr[i];
-    }
-    quick_sort(arr, 0, n-1);
-    for(int i=0;i<n;i++){
-        cout << arr[i] << " ";
-    }
-    return 0;
+    Quick_sort(arr, pivot, eidx-1);
+    Quick_sort(arr, eidx+1, last);
 }
