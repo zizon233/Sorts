@@ -30,7 +30,7 @@ int main() {
 	cout << "STL Sort : " << (double)(end - start) << "ms" << endl;
 	
 	start = clock();
-	Quick_sort(arr3, 0, n-1);
+	Quick_sort(arr3, 0, n);
 	end = clock();
 	cout << "Quick Sort : " << (double)(end - start) << "ms" << endl;
 	
