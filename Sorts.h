@@ -60,6 +60,6 @@ void Heap_sort(vector<int> &arr);
 
 void Quick_sort(vector<int> &arr, int sidx, int eidx);
 
-void bubble_sort(vector<int> arr);
+void bubble_sort(vector<int> &arr);
 
 #endif
